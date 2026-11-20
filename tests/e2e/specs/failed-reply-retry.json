@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "spec": {
+    "id": "failed-reply-retry",
+    "kind": "interactive",
+    "goal": "A reply that fails to generate shows an error with a retry action",
+    "requirementIndexes": [
+      4
+    ],
+    "acceptanceCriteriaIndexes": [
+      9
+    ],
+    "steps": [
+      "Sign in",
+      "Press New conversation",
+      "Send a message saying plan a weekend trip"
+    ],
+    "checks": [
+      {
+        "afterStep": 0,
+        "expectText": "Lumen"
+      },
+      {
+        "afterStep": 1,
+        "expectText": "Lumen"
+      },
+      {
+        "afterStep": 2,
+        "expectText": "plan a weekend trip"
+      }
+    ],
+    "mocks": {
+      "inference": [
+        {
+          "match": "plan a weekend trip",
+          "reply": "I am unable to answer that right now."
+        }
+      ]
+    }
+  }
+}

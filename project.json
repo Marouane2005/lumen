@@ -1,0 +1,17 @@
+{
+  "overview": "A friendly AI chat assistant with saved conversations for each signed-in user.",
+  "features": [
+    "Chat with a named AI assistant that replies as it types",
+    "Saved conversations with a sidebar list, rename and delete",
+    "Suggested starter prompts for a new conversation",
+    "Private conversations per signed-in user"
+  ],
+  "category": "ai-chat-assistant",
+  "tags": [
+    "ai",
+    "chat",
+    "assistant",
+    "productivity"
+  ],
+  "last_updated": "2026-11-20T20:06:30.596Z"
+}

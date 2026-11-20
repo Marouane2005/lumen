@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "spec": {
+    "id": "new-conversation-and-delete",
+    "kind": "interactive",
+    "goal": "Start a new conversation, see its derived title, then delete it",
+    "requirementIndexes": [
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "acceptanceCriteriaIndexes": [
+      4,
+      8
+    ],
+    "steps": [
+      "Sign in",
+      "Press New conversation",
+      "Send a message saying plan a weekend trip",
+      "Delete the conversation titled plan a weekend trip and confirm"
+    ],
+    "checks": [
+      {
+        "afterStep": 0,
+        "expectText": "Lumen"
+      },
+      {
+        "afterStep": 1,
+        "expectText": "Lumen"
+      },
+      {
+        "afterStep": 2,
+        "expectText": "plan a weekend trip"
+      },
+      {
+        "afterStep": 3,
+        "expectNoText": "plan a weekend trip"
+      }
+    ]
+  }
+}

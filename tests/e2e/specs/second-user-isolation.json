@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "spec": {
+    "id": "second-user-isolation",
+    "kind": "interactive",
+    "goal": "A second signed-in user sees none of the first user's conversations",
+    "requirementIndexes": [
+      12,
+      13
+    ],
+    "acceptanceCriteriaIndexes": [
+      7
+    ],
+    "persona": "second-user",
+    "steps": [
+      "Sign in"
+    ],
+    "checks": [
+      {
+        "afterStep": 0,
+        "expectText": "Lumen"
+      },
+      {
+        "afterStep": 0,
+        "expectNoText": "hello"
+      }
+    ]
+  }
+}

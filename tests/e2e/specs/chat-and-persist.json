@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "spec": {
+    "id": "chat-and-persist",
+    "kind": "interactive",
+    "goal": "Sign in, chat with the assistant, and find the conversation after a reload",
+    "requirementIndexes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "acceptanceCriteriaIndexes": [
+      0,
+      1,
+      2,
+      3,
+      5,
+      6,
+      10
+    ],
+    "steps": [
+      "Sign in",
+      "Send a message saying hello to Lumen",
+      "Reload the page",
+      "Press the conversation titled hello in the sidebar"
+    ],
+    "checks": [
+      {
+        "afterStep": 0,
+        "expectText": "Lumen"
+      },
+      {
+        "afterStep": 1,
+        "expectText": "Hello there, I am Lumen"
+      },
+      {
+        "afterStep": 2,
+        "expectText": "Lumen"
+      },
+      {
+        "afterStep": 3,
+        "expectText": "Hello there, I am Lumen"
+      }
+    ],
+    "mocks": {
+      "inference": [
+        {
+          "match": "hello",
+          "reply": "Hello there, I am Lumen. How can I help you today?"
+        }
+      ]
+    }
+  }
+}

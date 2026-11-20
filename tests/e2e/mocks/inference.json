@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "flowId": "chat-and-persist",
+      "match": "hello",
+      "reply": "Hello there, I am Lumen. How can I help you today?"
+    },
+    {
+      "flowId": "failed-reply-retry",
+      "match": "plan a weekend trip",
+      "reply": "I am unable to answer that right now."
+    }
+  ]
+}
